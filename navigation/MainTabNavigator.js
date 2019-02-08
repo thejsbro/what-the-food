@@ -1,3 +1,8 @@
+import React from 'react';
+import {
+  TouchableOpacity,
+} from 'react-native';
+import IOSIcon from "react-native-vector-icons/Ionicons";
 import { createStackNavigator, createDrawerNavigator } from 'react-navigation';
 
 import MenuScreen from '../screens/MyMenu';
@@ -13,7 +18,17 @@ const ShoppingStack = createStackNavigator({
 });
 
 const RecipesStack = createStackNavigator({
-  Recipes: RecipesScreen,
+  Recipes: {
+    screen: RecipesScreen,
+    navigationOptions: ({navigation}) => ({
+      title: "Блюда",
+      headerLeft:(<TouchableOpacity onPress={() => navigation.navigate("DrawerOpen")}>
+                    <IOSIcon name="ios-menu" size={30} />
+                  </TouchableOpacity>
+      ),
+    }),
+    headerStyle: { paddingRight: 10, paddingLeft: 15 },
+  },
 });
 
 export default createDrawerNavigator({

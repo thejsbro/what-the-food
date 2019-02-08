@@ -1,5 +1,5 @@
 import React from 'react';
-import RecipesList from '../components/RecipesList';
+import RecipesList from '../components/MyList';
 
 export default class SettingsScreen extends React.Component {
 
