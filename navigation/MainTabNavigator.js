@@ -3,7 +3,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import IOSIcon from "react-native-vector-icons/Ionicons";
-import { createStackNavigator, createDrawerNavigator } from 'react-navigation';
+import { createStackNavigator, createDrawerNavigator, createBottomTabNavigator } from 'react-navigation';
 
 import MenuScreen from '../screens/MyMenu';
 import ShoppingScreen from '../screens/Shopping';
@@ -31,7 +31,7 @@ const RecipesStack = createStackNavigator({
   },
 });
 
-export default createDrawerNavigator({
+export default createBottomTabNavigator({
   ['мое меню']: MenuStack,
   ['мои продукты']: ShoppingStack,
   ['блюда']: RecipesStack,

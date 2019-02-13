@@ -16,14 +16,29 @@ const list = [
 // Buttons
 const rightBtn = [
   {
-    component: <AntDesign name="minussquare" size={60} color="green" />
+    text: '>>'
   },
   {
-    component: <TextInput keyboardType='numeric' value='13' style={{height: 60, borderColor: 'gray', borderWidth: 1, fontSize: 30, textAlign: 'center'}}/>
+    text: 'Пн'
   },
   {
-    component: <AntDesign name="plussquare" size={60} color="red" />
-  }
+    text: 'Вт'
+  },
+  {
+    text: 'Ср'
+  },
+  {
+    text: 'Чт'
+  },
+  {
+    text: 'Пт'
+  },
+  {
+    text: 'Сб'
+  },
+  {
+    text: 'Вс'
+  },
 ]
 const leftBtn = [
   {
@@ -37,6 +52,7 @@ return <View>
   {
     list.map((item, i) => (
       <Swipeout
+        autoClose
         key={i}
         right={rightBtn}
         left={leftBtn}
