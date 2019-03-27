@@ -1,6 +1,6 @@
 import React from 'react';
 import { ScrollView, StyleSheet } from 'react-native';
-import Checklist from '../components/Checklist';
+import Checklist from '../components/ShoppingChecklist';
 
 export default class LinksScreen extends React.Component {
   static navigationOptions = {

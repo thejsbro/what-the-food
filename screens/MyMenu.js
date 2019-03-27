@@ -1,5 +1,5 @@
 import React from 'react';
-import MyMenu from '../components/MyListSlider';
+import MyMenu from '../components/RationList';
 
 export default class SettingsScreen extends React.Component {
 
