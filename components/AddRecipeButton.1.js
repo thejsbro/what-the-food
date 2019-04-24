@@ -10,7 +10,7 @@ const AddButton = ({ addRecipe }) => (
 const mapStateToProps = state => ({});
 
 const mapDispatchtoProps = dispatch => ({
-  addRecipe: () => dispatch(addRecipe())
+  addRecipe: () => dispatch(addRecipe(''))
 });
 
 export default connect(

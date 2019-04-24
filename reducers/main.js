@@ -5,26 +5,26 @@ const initialState = {
     date: { startDate: lastMonday(), endDate: nextSunday()},
     recipes: [
         {
-          title: "Spagetti"
+          name: "Spagetti"
         },
         {
-          title: "Potato bravo"
+          name: "Potato bravo"
         },
         {
-          title: "Potato bravo"
+          name: "Potato bravo"
         },
         {
-          title: "Potato bravo"
+          name: "Potato bravo"
         },
         {
-          title: "Potato bravo"
+          name: "Potato bravo"
         },
     ],
     ration: [],
     goods: [],
 }
 
-const main = (state, action) => {
+const main = (state = initialState, action) => {
     switch (action.type) {
         case types.PICK_DATE:
             const {
@@ -32,8 +32,13 @@ const main = (state, action) => {
                 endDate = state.date.endDate
             } = action.data;
             return { ...state, date: { startDate, endDate }};
+        case types.GET_RATION:
+            console.log('state: ', action.data);
+            return { ...state, ration: action.data || []}
+        case types.GET_RECIPES:
+            return { ...state, recipes: action.data || [] }
         default:
-            return initialState;
+            return {...state};
     }
 }
 

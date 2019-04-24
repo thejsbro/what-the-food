@@ -16,11 +16,11 @@ export default () => {
   console.log("hello");
   return (
     <View>
-      <Spinner
+      {/* <Spinner
         visible={true}
         textContent={"Loading..."}
         textStyle={{ color: "#FFF" }}
-      />
+      /> */}
       {list.map((item, i) => (
         <ListItem
           onPress={() => console.log("go to ingredients")}

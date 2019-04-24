@@ -56,7 +56,6 @@ export default createStackNavigator(
         ["рацион"]: MenuStack,
         ["продукты"]: ShoppingStack,
         ["мои рецепты"]: RecipesStack,
-        ["все рецепты"]: RecipesStack
       }),
       navigationOptions: ({ navigation }) => ({
         headerLeft: <DatePickerButton navigation={navigation}/>,

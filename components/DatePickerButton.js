@@ -4,7 +4,6 @@ import { Button } from "react-native-elements";
 import { pickDate as pickDateAction } from "../actions/actions";
  
 const DatePickerStartButton = ({ navigation, title }) => {
-  console.log('dadsdad', title)
   return (
     <Button
       title={title}
